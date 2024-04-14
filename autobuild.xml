@@ -122,11 +122,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8bfcf6942bba38d933772879ce84f2e9e2786490</string>
+              <string>56f1cc03050444f584c7d8e094f440b2da8b29eb</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r2/openssl-3.2.1.8678027151-darwin64-8678027151.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r3/openssl-3.2.1.8678614580-darwin64-8678614580.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -148,11 +148,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>67f138e1f8ad9f94e58ea06c3d663b2c3bc7be3d</string>
+              <string>f8792cee51d4133d65e801a7c9960712eca1f3c4</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r2/openssl-3.2.1.8678027151-linux64-8678027151.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r3/openssl-3.2.1.8678614580-linux64-8678614580.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -176,11 +176,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>84a9f214d88f5057776fc1740765bf5df019bfb3</string>
+              <string>42e2a119e55f71df909a21d2d0e170bf1b1f3493</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r2/openssl-.8678027151-windows64-8678027151.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r3/openssl-.8678614580-windows64-8678614580.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>
