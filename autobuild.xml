@@ -122,11 +122,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b286e4a10cf6b1b2710b85ff96ffc0e41fd5fde8</string>
+              <string>11b08a3a808a4feaf3e45bd3ea5a96c6e7eab80a</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-openssl/releases/download/v1.1.1q.de53f55/openssl-1.1.1q.de53f55-darwin64-de53f55.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing/openssl-3.2.1.8661909680-darwin64-8661909680.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -148,11 +148,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>5f6953db991ef6badb0525ecc98daf28d368e9e7</string>
+              <string>05916e46550ff43dd3ffde43000ac01a768d3a7f</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-openssl/releases/download/v1.1.1q.de53f55/openssl-1.1.1q.de53f55-linux64-de53f55.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing/openssl-3.2.1.8661909680-linux64-8661909680.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -176,11 +176,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8bd3dea6d81de5e469b241a1b79e61efce6ecc05</string>
+              <string>3ed2213913764e606ba3ebe7a624fdc964303421</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-openssl/releases/download/v1.1.1q.de53f55/openssl-1.1.1q.de53f55-windows64-de53f55.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing/openssl-.8661909680-windows64-8661909680.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>
