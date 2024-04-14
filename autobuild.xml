@@ -122,11 +122,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>11b08a3a808a4feaf3e45bd3ea5a96c6e7eab80a</string>
+              <string>8bfcf6942bba38d933772879ce84f2e9e2786490</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing/openssl-3.2.1.8661909680-darwin64-8661909680.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r2/openssl-3.2.1.8678027151-darwin64-8678027151.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -148,11 +148,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>05916e46550ff43dd3ffde43000ac01a768d3a7f</string>
+              <string>67f138e1f8ad9f94e58ea06c3d663b2c3bc7be3d</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing/openssl-3.2.1.8661909680-linux64-8661909680.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r2/openssl-3.2.1.8678027151-linux64-8678027151.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -176,11 +176,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>3ed2213913764e606ba3ebe7a624fdc964303421</string>
+              <string>84a9f214d88f5057776fc1740765bf5df019bfb3</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing/openssl-.8661909680-windows64-8661909680.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.2.1_testing-r2/openssl-.8678027151-windows64-8678027151.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -210,11 +210,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>717f4d912cedaac8efa5d0562cb3b328f7366784</string>
+              <string>dacc5f3fb307c4d1292ed1ffb1d595d83599062d</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-zlib-ng/releases/download/v2.1.6-r3/zlib_ng-2.1.6-r3-darwin64-8413227030.tar.zst</string>
+              <string>https://github.com/secondlife/3p-zlib-ng/releases/download/v1.2.11.zlib-ng.32fd361/zlib_ng-1.2.11.zlib-ng.32fd361-darwin64-32fd361.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -224,11 +224,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>24035cd24f694e8e5d2a17fef84c9ed3c4d00a04</string>
+              <string>fba88375e12454ae19f4528e11ffc7ddf7d879ec</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-zlib-ng/releases/download/v2.1.6-r3/zlib_ng-2.1.6-r3-linux64-8413227030.tar.zst</string>
+              <string>https://github.com/secondlife/3p-zlib-ng/releases/download/v1.2.11.zlib-ng.32fd361/zlib_ng-1.2.11.zlib-ng.32fd361-linux64-32fd361.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -238,11 +238,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>aa20285e6e6b5fbf3224000d784334b1603834c9</string>
+              <string>ccfca9451063e2d0e95baa73b1ad2054d3e38907</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-zlib-ng/releases/download/v2.1.6-r3/zlib_ng-2.1.6-r3-windows64-8413227030.tar.zst</string>
+              <string>https://github.com/secondlife/3p-zlib-ng/releases/download/v1.2.11.zlib-ng.32fd361/zlib_ng-1.2.11.zlib-ng.32fd361-windows64-32fd361.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>
