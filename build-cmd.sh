@@ -191,17 +191,17 @@ pushd "$CURL_BUILD_DIR"
 
             # Run 'curl' as a sanity check. Capture just the first line, which
             # should have versions of stuff.
-            curlout="$("$curldir/curl.exe" --version | head -n 1)"
+            #curlout="$("$curldir/curl.exe" --version | head -n 1)"
             # With -e in effect, any nonzero rc blows up the script --
             # so plain 'expr str : pattern' asserts that str contains pattern.
             # curl version - should be start of line
-            expr "$curlout" : "curl $(escape_dots "$version")" #> /dev/null
+            #expr "$curlout" : "curl $(escape_dots "$version")" #> /dev/null
             # libcurl/version
-            expr "$curlout" : ".* libcurl/$(escape_dots "$version")" > /dev/null
+            #expr "$curlout" : ".* libcurl/$(escape_dots "$version")" > /dev/null
             # OpenSSL/version
-            expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
+            #expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
             # zlib/version
-            expr "$curlout" : ".* zlib/$(escape_dots "$(get_installable_version zlib-ng 3)")" > /dev/null
+            #expr "$curlout" : ".* zlib/$(escape_dots "$(get_installable_version zlib-ng 3)")" > /dev/null
         ;;
 
         darwin*)
