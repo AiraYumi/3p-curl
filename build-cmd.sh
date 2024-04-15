@@ -324,7 +324,6 @@ pushd "$CURL_BUILD_DIR"
                 -DOPENSSL_CRYPTO_LIBRARY="$stage/packages/lib/release/libcrypto.a" \
                 -DOPENSSL_SSL_LIBRARY="$stage/packages/lib/release/libssl.a" \
                 -DBUILD_SHARED_LIBS:bool=off -DCMAKE_INSTALL_PREFIX=$stage
-                -DZLIB_ROOT="$stage/zlib_root" -DHTTP_ONLY=ON
             
             check_damage "$AUTOBUILD_PLATFORM"
 
