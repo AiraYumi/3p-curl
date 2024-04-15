@@ -316,11 +316,15 @@ pushd "$CURL_BUILD_DIR"
             cmake "${CURL_SOURCE_DIR}" -G"Unix Makefiles" \
                 -DCMAKE_C_FLAGS:STRING="$plainopts" -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DUSE_OPENSSL:BOOL=TRUE \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
+                -DOPENSSL_INCLUDE_DIR="$stage/packages/include" \
+                -DOPENSSL_CRYPTO_LIBRARY="$stage/packages/lib/release/libcrypto.a" \
+                -DOPENSSL_SSL_LIBRARY="$stage/packages/lib/release/libssl.a" \
                 -DBUILD_SHARED_LIBS:bool=off -DCMAKE_INSTALL_PREFIX=$stage
+                -DZLIB_ROOT="$stage/zlib_root" -DHTTP_ONLY=ON
             
             check_damage "$AUTOBUILD_PLATFORM"
 
