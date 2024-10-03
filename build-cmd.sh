@@ -161,6 +161,8 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
                 -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DOPENSSL_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
+                -DOPENSSL_LIBRARY:FILEPATH="$stage/packages/lib/release/libssl.a" \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$packages/lib/release/nghttp2.lib" \
@@ -237,6 +239,8 @@ pushd "$CURL_BUILD_DIR"
                 -DBUILD_SHARED_LIBS:BOOL=OFF \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
                 -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DOPENSSL_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
+                -DOPENSSL_LIBRARY:FILEPATH="$stage/packages/lib/release/libssl.a" \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
@@ -333,6 +337,8 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
                 -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DOPENSSL_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
+                -DOPENSSL_LIBRARY:FILEPATH="$stage/packages/lib/release/libssl.a" \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
