@@ -141,7 +141,7 @@ sys.stdout.buffer.write('.'.join(literal_eval(r'''$pydata''')['version'].split('
 # periods with backslashes.
 escape_dots ()
 {
-    echo "${1//./\\.}"
+    echo "${3//./\\.}"
 }
 
 mkdir -p "$CURL_BUILD_DIR"
