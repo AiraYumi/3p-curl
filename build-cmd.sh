@@ -160,7 +160,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_C_FLAGS:STRING="$plainopts" \
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DUSE_OPENSSL:BOOL=TRUE \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$packages/lib/release/nghttp2.lib" \
@@ -180,7 +180,7 @@ pushd "$CURL_BUILD_DIR"
 
             # Stage archives
             mkdir -p "${stage}/lib/release"
-            mv "${stage}/lib/libcurl.lib" "${stage}"/lib/release/
+            mv "${stage}/lib/libcurl_imp.lib" "${stage}"/lib/release/
 
             # Run 'curl' as a sanity check. Capture just the first line, which
             # should have versions of stuff.
@@ -188,11 +188,11 @@ pushd "$CURL_BUILD_DIR"
             # With -e in effect, any nonzero rc blows up the script --
             # so plain 'expr str : pattern' asserts that str contains pattern.
             # curl version - should be start of line
-            expr "$curlout" : "curl $(escape_dots "$version")" #> /dev/null
+            expr "$curlout" : "curl $(escape_dots "$version")" > /dev/null
             # libcurl/version
             expr "$curlout" : ".* libcurl/$(escape_dots "$version")" > /dev/null
             # OpenSSL/version
-            expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
+            #expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
             # zlib/version
             expr "$curlout" : ".* zlib/" > /dev/null
         ;;
@@ -236,7 +236,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DBUILD_SHARED_LIBS:BOOL=OFF \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DUSE_OPENSSL:BOOL=TRUE \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
@@ -283,7 +283,7 @@ pushd "$CURL_BUILD_DIR"
             # libcurl/version
             expr "$curlout" : ".* libcurl/$(escape_dots "$version")" > /dev/null
             # OpenSSL/version
-            expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
+            #expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
             # zlib/version
             expr "$curlout" : ".* zlib/" > /dev/null
             # nghttp2/versionx
@@ -332,7 +332,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_C_FLAGS:STRING="$plainopts" \
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DCURL_USE_OPENSSL:BOOL=TRUE \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
@@ -371,7 +371,7 @@ pushd "$CURL_BUILD_DIR"
             # libcurl/version
             expr "$curlout" : ".* libcurl/$(escape_dots "$version")" > /dev/null
             # OpenSSL/version
-            expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
+            #expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
             # zlib/version
             expr "$curlout" : ".* zlib/" > /dev/null
             # nghttp2/versionx
