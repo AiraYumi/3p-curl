@@ -161,6 +161,8 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
                 -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DOPENSSL_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
+                -DOPENSSL_LIBRARY:FILEPATH="$stage/packages/lib/release/libssl.lib" \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$packages/lib/release/nghttp2.lib" \
@@ -180,7 +182,7 @@ pushd "$CURL_BUILD_DIR"
 
             # Stage archives
             mkdir -p "${stage}/lib/release"
-            mv "${stage}/lib/libcurl.lib" "${stage}"/lib/release/
+            mv "${stage}/lib/libcurl_imp.lib" "${stage}"/lib/release/
 
             # Run 'curl' as a sanity check. Capture just the first line, which
             # should have versions of stuff.
@@ -188,7 +190,7 @@ pushd "$CURL_BUILD_DIR"
             # With -e in effect, any nonzero rc blows up the script --
             # so plain 'expr str : pattern' asserts that str contains pattern.
             # curl version - should be start of line
-            expr "$curlout" : "curl $(escape_dots "$version")" #> /dev/null
+            expr "$curlout" : "curl $(escape_dots "$version")" > /dev/null
             # libcurl/version
             expr "$curlout" : ".* libcurl/$(escape_dots "$version")" > /dev/null
             # OpenSSL/version
@@ -237,6 +239,8 @@ pushd "$CURL_BUILD_DIR"
                 -DBUILD_SHARED_LIBS:BOOL=OFF \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
                 -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DOPENSSL_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
+                -DOPENSSL_LIBRARY:FILEPATH="$stage/packages/lib/release/libssl.a" \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
@@ -333,6 +337,8 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
                 -DCMAKE_USE_OPENSSL:BOOL=TRUE \
+                -DOPENSSL_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
+                -DOPENSSL_LIBRARY:FILEPATH="$stage/packages/lib/release/libssl.a" \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \

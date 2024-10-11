@@ -112,11 +112,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>a20277991043a4a00fb8280a27a41fbd87c4b840</string>
+              <string>20276ba2ba62b1d71bfc0188779cbcd97af50386</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-openssl/releases/download/v1.1.1w-r1/openssl-1.1.1w-darwin64-10329796904.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.0.15/openssl-3.0.15-darwin64-11287322629.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -138,11 +138,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>0f2cd519431b11cacf85971c66c49e5b4d26c56f</string>
+              <string>8491fd273683569095172e262de5a9d8cda5a9c8</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-openssl/releases/download/v1.1.1w-r1/openssl-1.1.1w-linux64-10329796904.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.0.15/openssl-3.0.15-linux64-11287322629.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -166,11 +166,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>5e396eedf1492d18126b7281367123c1d64b89aa</string>
+              <string>e0e053696f2ead72b707d92418c3a0eed20a1a5f</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/secondlife/3p-openssl/releases/download/v1.1.1w-r1/openssl-1.1.1w-windows64-10329796904.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.0.15/openssl-3.0.15-windows64-11287322629.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -183,7 +183,7 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
         <key>copyright</key>
         <string>Copyright (c) 1998-2011 The OpenSSL Project.  All rights reserved; Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)</string>
         <key>version</key>
-        <string>1.1.1w</string>
+        <string>3.0.15</string>
         <key>name</key>
         <string>openssl</string>
         <key>description</key>
@@ -385,7 +385,7 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
           </map>
           <key>manifest</key>
           <array>
-            <string>lib/release/libcurl.lib</string>
+            <string>lib/release/libcurl_imp.lib</string>
           </array>
           <key>name</key>
           <string>windows64</string>
