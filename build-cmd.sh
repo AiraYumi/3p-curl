@@ -180,7 +180,7 @@ pushd "$CURL_BUILD_DIR"
 
             # Stage archives
             mkdir -p "${stage}/lib/release"
-            mv "${stage}/lib/libcurl.lib" "${stage}"/lib/release/
+            mv "${stage}/lib/libcurl_imp.lib" "${stage}"/lib/release/
 
             # Run 'curl' as a sanity check. Capture just the first line, which
             # should have versions of stuff.
