@@ -180,7 +180,7 @@ pushd "$CURL_BUILD_DIR"
 
             # Stage archives
             mkdir -p "${stage}/lib/release"
-            mv "${stage}/lib/libcurl.lib" "${stage}"/lib/release/
+            mv "${stage}/lib/libcurl*.lib" "${stage}"/lib/release/
 
             # Run 'curl' as a sanity check. Capture just the first line, which
             # should have versions of stuff.
@@ -250,7 +250,7 @@ pushd "$CURL_BUILD_DIR"
             cmake --install . --config Release
 
             mkdir -p "$stage/lib/release"
-            mv "$stage/lib/libcurl.a" "$stage/lib/release/libcurl.a"
+            mv "$stage/lib/libcurl*.a" "$stage/lib/release/libcurl.a"
 
             # conditionally run unit tests
             # Disabled here and below by default on Mac because they
@@ -345,7 +345,7 @@ pushd "$CURL_BUILD_DIR"
             cmake --install . --config Release
 
             mkdir -p "$stage/lib/release"
-            mv "$stage/lib/libcurl.a" "$stage/lib/release/libcurl.a"
+            mv "$stage/lib/libcurl*.a" "$stage/lib/release/libcurl.a"
 
 #           # conditionally run unit tests
 #           if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
