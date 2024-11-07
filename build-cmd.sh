@@ -160,7 +160,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_C_FLAGS:STRING="$plainopts" \
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DUSE_OPENSSL:BOOL=TRUE \
+                -DCURL_USE_OPENSSL:BOOL=FALSE \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$packages/lib/release/nghttp2.lib" \
@@ -236,7 +236,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DBUILD_SHARED_LIBS:BOOL=OFF \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DUSE_OPENSSL:BOOL=TRUE \
+                -DCURL_USE_OPENSSL:BOOL=FALSE \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
@@ -332,7 +332,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCMAKE_C_FLAGS:STRING="$plainopts" \
                 -DCMAKE_CXX_FLAGS:STRING="$opts" \
                 -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DCURL_USE_OPENSSL:BOOL=TRUE \
+                -DCURL_USE_OPENSSL:BOOL=FALSE \
                 -DUSE_NGHTTP2:BOOL=TRUE \
                 -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
                 -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
