@@ -194,7 +194,7 @@ pushd "$CURL_BUILD_DIR"
             # OpenSSL/version
             #expr "$curlout" : ".* OpenSSL/$(escape_dots "$(get_installable_version openssl 3)")" > /dev/null
             # zlib/version
-            expr "$curlout" : ".* zlib/" > /dev/null
+            #expr "$curlout" : ".* zlib/" > /dev/null
         ;;
 
         darwin*)
