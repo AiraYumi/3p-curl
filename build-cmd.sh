@@ -154,6 +154,8 @@ pushd "$CURL_BUILD_DIR"
 
             packages="$(cygpath -m "$stage/packages")"
             load_vsvars
+            export CPPFLAGS=-I"${stage}"/packages/include
+            export LDFLAGS=-L"${stage}"/packages/lib/release
 
             cmake "$(cygpath -m "${CURL_SOURCE_DIR}")" \
                 -G"$AUTOBUILD_WIN_CMAKE_GEN" -A"$AUTOBUILD_WIN_VSPLATFORM" \
@@ -199,6 +201,8 @@ pushd "$CURL_BUILD_DIR"
 
         darwin*)
             export MACOSX_DEPLOYMENT_TARGET="$LL_BUILD_DARWIN_DEPLOY_TARGET"
+            export CPPFLAGS=-I"${stage}"/packages/include
+            export LDFLAGS=-L"${stage}"/packages/lib/release
 
             # Force libz and openssl static linkage by moving .dylibs out of the way
             # trap restore_dylibs EXIT
@@ -331,6 +335,9 @@ pushd "$CURL_BUILD_DIR"
 
             # Release configure and build
             export LD_LIBRARY_PATH="${stage}"/packages/lib/release:"$saved_path"
+            export CPPFLAGS=-I"${stage}"/packages/include
+            export LDFLAGS=-L"${stage}"/packages/lib/release
+
 
             cmake "${CURL_SOURCE_DIR}" -G"Ninja" -DCMAKE_BUILD_TYPE=Release \
                 -DCMAKE_C_FLAGS:STRING="$plainopts" \
