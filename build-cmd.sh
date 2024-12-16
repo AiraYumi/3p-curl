@@ -339,6 +339,7 @@ pushd "$CURL_BUILD_DIR"
             export CPPFLAGS="-I${stage}/packages/include"
             export LDFLAGS="-L${stage}/packages/lib/release"
 
+            ${CURL_SOURCE_DIR}/buildconf
             ${CURL_SOURCE_DIR}/configure --build=release \
                 --enable-threaded-resolver \
                 --with-openssl \
