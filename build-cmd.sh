@@ -335,25 +335,21 @@ pushd "$CURL_BUILD_DIR"
 
             # Release configure and build
             export LD_LIBRARY_PATH="${stage}"/packages/lib/release:"$saved_path"
+            export CFLAGS="$plainopts"
+            export CPPFLAGS="-I${stage}/packages/include"
+            export LDFLAGS="-L${stage}/packages/lib/release"
 
-            env \
-            CPPFLAGS=-I"${stage}"/packages/include \
-            LDFLAGS=-L"${stage}"/packages/lib/release \
-            cmake "${CURL_SOURCE_DIR}" -G"Ninja" -DCMAKE_BUILD_TYPE=Release \
-                -DCMAKE_C_FLAGS:STRING="$plainopts" \
-                -DCMAKE_CXX_FLAGS:STRING="$opts" \
-                -DENABLE_THREADED_RESOLVER:BOOL=ON \
-                -DCMAKE_USE_OPENSSL:BOOL=TRUE \
-                -DUSE_NGHTTP2:BOOL=TRUE \
-                -DNGHTTP2_INCLUDE_DIR:FILEPATH="$stage/packages/include" \
-                -DNGHTTP2_LIBRARY:FILEPATH="$stage/packages/lib/release/libnghttp2.a" \
-                -DBUILD_SHARED_LIBS:BOOL=FALSE \
-                -DCMAKE_INSTALL_PREFIX=$stage
+            ${CURL_SOURCE_DIR}/configure --build=release \
+                --enable-threaded-resolver \
+                --with-openssl \
+                --with-nghttp2 \
+                --disable-shared \
+                --prefix=$stage
 
             check_damage "$AUTOBUILD_PLATFORM"
 
-            cmake --build . --config Release -j$AUTOBUILD_CPU_COUNT
-            cmake --install . --config Release
+            make -j $AUTOBUILD_CPU_COUNT
+            make install
 
             mkdir -p "$stage/lib/release"
             mv "$stage/lib/libcurl.a" "$stage/lib/release/libcurl.a"
