@@ -112,11 +112,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>05028ff506d71bfe436871aa8d99945e76c6e04f</string>
+              <string>fb31e3f00b43880b1f8b3ab329109a47a3a3e036</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.4.0-r1/openssl-3.4.0-r1-darwin64-11906558639.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.0.16/openssl-3.0.16-darwin64-13404182059.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -138,11 +138,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>bdd43953a75ae4181bcb69e623e2683d6c479e11</string>
+              <string>f40cf5dfddedcd29d0d14a6b85bac1a54a97d3e7</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.4.0-r1/openssl-3.4.0-r1-linux64-11906558639.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.0.16/openssl-3.0.16-linux64-13404182059.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -166,11 +166,11 @@ Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors</string>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ee03f894150b064c3288c6db70810e9548ecf66c</string>
+              <string>6d1f375e46a8bb2a74b4a53d0e6635d4ba8825fd</string>
               <key>hash_algorithm</key>
               <string>sha1</string>
               <key>url</key>
-              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.4.0-r1/openssl-3.4.0-r1-windows64-11906558639.tar.zst</string>
+              <string>https://github.com/AiraYumi/3p-openssl/releases/download/v3.0.16/openssl-3.0.16-windows64-13404182059.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>

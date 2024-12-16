@@ -339,21 +339,23 @@ pushd "$CURL_BUILD_DIR"
             export CPPFLAGS="-I${stage}/packages/include"
             export LDFLAGS="-L${stage}/packages/lib/release"
 
-            autoreconf -fi
-            ${CURL_SOURCE_DIR}/configure --build=release \
-                --enable-threaded-resolver \
-                --with-openssl \
-                --with-nghttp2 \
-                --disable-shared \
-                --prefix=$stage
+            pushd "build_$arch"
+                autoreconf -fi
+                ./configure --build=release \
+                    --enable-threaded-resolver \
+                    --with-openssl \
+                    --with-nghttp2 \
+                    --disable-shared \
+                    --prefix=$stage
 
-            check_damage "$AUTOBUILD_PLATFORM"
+                check_damage "$AUTOBUILD_PLATFORM"
 
-            make -j $AUTOBUILD_CPU_COUNT
-            make install
+                make -j $AUTOBUILD_CPU_COUNT
+                make install
 
-            mkdir -p "$stage/lib/release"
-            mv "$stage/lib/libcurl.a" "$stage/lib/release/libcurl.a"
+                mkdir -p "$stage/lib/release"
+                mv "$stage/lib/libcurl.a" "$stage/lib/release/libcurl.a"
+            popd
 
 #           # conditionally run unit tests
 #           if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
