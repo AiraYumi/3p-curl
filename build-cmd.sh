@@ -164,6 +164,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCURL_USE_LIBPSL=OFF \
                 -DCURL_DISABLE_LDAP=ON \
                 -DCURL_DISABLE_LDAPS=ON \
+                -DCURL_BROTLI=OFF \
                 -DCURL_STATICLIB=ON \
                 -DCURL_USE_OPENSSL:BOOL=TRUE \
                 -DOPENSSL_INCLUDE_DIR="$packages/include/openssl" \
@@ -258,6 +259,7 @@ pushd "$CURL_BUILD_DIR"
                         -DCURL_USE_LIBPSL=OFF \
                         -DCURL_DISABLE_LDAP=ON \
                         -DCURL_DISABLE_LDAPS=ON \
+                        -DCURL_BROTLI=OFF \
                         -DCURL_USE_OPENSSL:BOOL=TRUE \
                         -DOPENSSL_INCLUDE_DIR="$OPENSSL_INCLUDE" \
                         -DOPENSSL_CRYPTO_LIBRARY="$stage/packages/lib/release/libcrypto.a" \
@@ -360,6 +362,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCURL_USE_LIBPSL=OFF \
                 -DCURL_DISABLE_LDAP=ON \
                 -DCURL_DISABLE_LDAPS=ON \
+                -DCURL_BROTLI=OFF \
                 -DCURL_USE_OPENSSL:BOOL=TRUE \
                 -DOPENSSL_INCLUDE_DIR="$stage/packages/include" \
                 -DOPENSSL_SSL_LIBRARY="$stage/packages/lib/release/libssl.a" \
