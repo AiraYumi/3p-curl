@@ -5,11 +5,11 @@
  *                            | (__| |_| |  _ <| |___
  *                             \___|\___/|_| \_\_____|
  *
- * Copyright (C) 1998 - 2017, Daniel Stenberg, <daniel@haxx.se>, et al.
+ * Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
  *
  * This software is licensed as described in the file COPYING, which
  * you should have received as part of this distribution. The terms
- * are also available at https://curl.haxx.se/docs/copyright.html.
+ * are also available at https://curl.se/docs/copyright.html.
  *
  * You may opt to use, copy, modify, merge, publish, distribute and/or sell
  * copies of the Software, and permit persons to whom the Software is
@@ -18,20 +18,31 @@
  * This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
  * KIND, either express or implied.
  *
+ * SPDX-License-Identifier: curl
+ *
  ***************************************************************************/
-#include "curlcheck.h"
+#include "unitcheck.h"
 
 #include "speedcheck.h"
 #include "urldata.h"
 
-static CURLcode unit_setup(void)
+static CURLcode t1606_setup(struct Curl_easy **easy)
 {
-  return CURLE_OK;
+  CURLcode res = CURLE_OK;
+
+  global_init(CURL_GLOBAL_ALL);
+  *easy = curl_easy_init();
+  if(!*easy) {
+    curl_global_cleanup();
+    return CURLE_OUT_OF_MEMORY;
+  }
+  return res;
 }
 
-static void unit_stop(void)
+static void t1606_stop(struct Curl_easy *easy)
 {
-
+  curl_easy_cleanup(easy);
+  curl_global_cleanup();
 }
 
 static int runawhile(struct Curl_easy *easy,
@@ -41,7 +52,7 @@ static int runawhile(struct Curl_easy *easy,
                      int dec)
 {
   int counter = 1;
-  struct timeval now = {1, 0};
+  struct curltime now = {1, 0};
   CURLcode result;
   int finaltime;
 
@@ -65,10 +76,11 @@ static int runawhile(struct Curl_easy *easy,
   return finaltime;
 }
 
-UNITTEST_START
+static CURLcode test_unit1606(const char *arg)
 {
-  struct Curl_easy *easy = curl_easy_init();
-  abort_unless(easy, "out of memory");
+  struct Curl_easy *easy;
+
+  UNITTEST_BEGIN(t1606_setup(&easy))
 
   fail_unless(runawhile(easy, 41, 41, 40, 0) == 41,
               "wrong low speed timeout");
@@ -83,8 +95,5 @@ UNITTEST_START
   fail_unless(runawhile(easy, 10, 50, 100, 2) == 36,
               "bad timeout");
 
-  curl_easy_cleanup(easy);
-
-  return 0;
+  UNITTEST_END(t1606_stop(easy))
 }
-UNITTEST_STOP

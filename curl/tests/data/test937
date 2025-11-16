@@ -19,7 +19,7 @@ AUTH DIGEST-MD5 PLAIN
 REPLY "AUTH DIGEST-MD5" 334 Rubbish
 REPLY * 501 AUTH exchange cancelled by client
 REPLY "AUTH PLAIN" 334 PLAIN supported
-REPLY dXNlcgB1c2VyAHNlY3JldA== 235 Authenticated
+REPLY AHVzZXIAc2VjcmV0 235 Authenticated
 </servercmd>
 </reply>
 
@@ -31,35 +31,36 @@ smtp
 </server>
 <features>
 !SSPI
-debug
+Debug
 crypto
+digest
 </features>
- <name>
+<name>
 SMTP DIGEST-MD5 authentication with SASL downgrade
- </name>
-<stdin>
+</name>
+<stdin crlf="yes">
 mail body
 </stdin>
- <command>
-smtp://%HOSTIP:%SMTPPORT/937 --mail-rcpt recipient@example.com --mail-from sender@example.com -u user:secret -T -
+<command>
+smtp://%HOSTIP:%SMTPPORT/%TESTNUMBER --mail-rcpt recipient@example.com --mail-from sender@example.com -u user:secret -T -
 </command>
 </client>
 
 #
 # Verify data after the test has been "shot"
 <verify>
-<protocol>
-EHLO 937
+<protocol crlf="yes">
+EHLO %TESTNUMBER
 AUTH DIGEST-MD5
 *
 AUTH PLAIN
-dXNlcgB1c2VyAHNlY3JldA==
+AHVzZXIAc2VjcmV0
 MAIL FROM:<sender@example.com>
 RCPT TO:<recipient@example.com>
 DATA
 QUIT
 </protocol>
-<upload>
+<upload crlf="yes">
 mail body
 .
 </upload>
