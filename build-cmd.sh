@@ -165,6 +165,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCURL_DISABLE_LDAP=ON \
                 -DCURL_DISABLE_LDAPS=ON \
                 -DCURL_BROTLI=OFF \
+                -DCURL_ZTSD=OFF \
                 -DCURL_STATICLIB=ON \
                 -DCURL_USE_OPENSSL:BOOL=TRUE \
                 -DOPENSSL_INCLUDE_DIR="$packages/include/openssl" \
@@ -363,6 +364,7 @@ pushd "$CURL_BUILD_DIR"
                 -DCURL_DISABLE_LDAP=ON \
                 -DCURL_DISABLE_LDAPS=ON \
                 -DCURL_BROTLI=OFF \
+                -DCURL_ZSTD=OFF \
                 -DCURL_USE_OPENSSL:BOOL=TRUE \
                 -DOPENSSL_INCLUDE_DIR="$stage/packages/include" \
                 -DOPENSSL_SSL_LIBRARY="$stage/packages/lib/release/libssl.a" \
